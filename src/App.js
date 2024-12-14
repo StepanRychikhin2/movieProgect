@@ -12,9 +12,9 @@ function App() {
 
 </Header>
 <Routes>
-        <Route path="trendTodey" element={<TrendTodey />}></Route>
+        <Route path="/" element={<TrendTodey />}></Route>
           <Route path="movie" element={<MovieSerh />} />
-          <Route path="loadpage" element={<Loadpage />} />
+          <Route path="/loadpage" element={<Loadpage />} />
       </Routes>
   </>
   );

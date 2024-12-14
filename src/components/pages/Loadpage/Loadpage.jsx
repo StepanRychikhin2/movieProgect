@@ -13,7 +13,7 @@ const options = {
 const MovieDetails = () => {
   // const { movieId } = useParams();
   const [movie, setMovie] = useState(null);
-  let { movieId } = useParams();
+  const { id } = useParams();
   // useEffect(() => {
   //   fetch(`https://api.themoviedb.org/3/movie/${movieId}?language=en-US`, options)
   //   .then((response) => response.json())
@@ -31,7 +31,7 @@ const MovieDetails = () => {
           <Outlet />
         </>
       )} */}
-      {console.log(movieId)}
+      {console.log(id)}
       {console.log(movie)}
     </div>
   );
