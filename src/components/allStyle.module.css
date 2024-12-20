@@ -4,3 +4,13 @@ list-style: none;
 gap: 20px;
 font-size: 25px;
 }
+
+
+.linkToload {
+    width: 100px;
+}
+
+
+body{
+    background-color: rgb(136, 136, 136);
+}

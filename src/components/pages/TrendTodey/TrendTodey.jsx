@@ -1,6 +1,8 @@
-import { Outlet, Link } from 'react-router-dom'
+import { Outlet, Link, NavLink } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { useParams } from "react-router";
+import styled from "styled-components";
+import sty from "../../allStyle.module.css"
 const options = {
 	method: 'GET',
 	headers: {
@@ -9,7 +11,13 @@ const options = {
 			'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlM2U5NjUzOTA2YmViMWZkYjJlZmMxNWQ4NGZkYjVkMCIsIm5iZiI6MTczNDA5NzAyNS45NjgsInN1YiI6IjY3NWMzODgxNGI1MjgwZmYwYzFjMDJkMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.U5yk5euBreAV-lTz-TDxrJpfqnF0YeufaoMJaGHCx-Q',
 	},
 }
+const StyledLink = styled(NavLink)`
+ color: #003cff;
 
+ &.active {
+   color: #005ed8;
+ }
+`;
 const TrendTodey = () => {
 	// let params = useParams();
 	const [movieTrendTodey, setMovieTrendTodey] = useState([])
@@ -35,7 +43,7 @@ const TrendTodey = () => {
 					movieTrendTodey.results.map((data) => {
 						return (
 							<li key={data.id}>
-								<Link to="/Loadpage"><p>{data.title ? data.title : data.name}</p></Link>
+								<StyledLink className={sty.linkToload} to="/Loadpage"><p>{data.title ? data.title : data.name}</p></StyledLink>
 								{/* {params.data.id} */}
 							</li>
 						)
