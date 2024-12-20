@@ -1,0 +1,6 @@
+.listHeader {
+    display: flex;
+list-style: none;
+gap: 20px;
+font-size: 25px;
+}

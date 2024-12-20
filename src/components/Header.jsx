@@ -1,10 +1,10 @@
 import { Outlet, Link } from 'react-router-dom'
-
+import sty from "./allStyle.module.css"
 const Header = () => {
 	return (
 		<>
 			<nav>
-				<ul>
+				<ul className={sty.listHeader}>
 					<li>
 						<Link to="/">Home</Link>
 					</li>
