@@ -19,7 +19,8 @@ const StyledLink = styled(NavLink)`
  }
 `;
 const TrendTodey = () => {
-	// let params = useParams();
+	let params = useParams();
+	console.log(params.id)
 	const [movieTrendTodey, setMovieTrendTodey] = useState([])
 	const [forstLoad, setForstLoad] = useState(1)
 	useEffect(() => {
@@ -43,8 +44,9 @@ const TrendTodey = () => {
 					movieTrendTodey.results.map((data) => {
 						return (
 							<li key={data.id}>
-								<StyledLink className={sty.linkToload} to="/Loadpage"><p>{data.title ? data.title : data.name}</p></StyledLink>
+								<StyledLink  className={sty.linkToload} to="/Loadpage/:id"><p>{data.title ? data.title : data.name}</p></StyledLink>
 								{/* {params.data.id} */}
+								{/* {console.log(params)} */}
 							</li>
 						)
 					})

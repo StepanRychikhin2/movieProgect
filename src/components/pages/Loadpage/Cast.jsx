@@ -10,12 +10,10 @@ const options = {
 	},
 }
 
-const MovieDetails = () => {
-  let params = useParams();
-	console.log(params.id)
-  
-  const [movie, setMovie] = useState(true);
-  // const { id } = useParams();
+const Cast = () => {
+  // const { movieId } = useParams();
+  const [movie, setMovie] = useState(null);
+  const { id } = useParams();
   // useEffect(() => {
   //   fetch(`https://api.themoviedb.org/3/movie/${movieId}?language=en-US`, options)
   //   .then((response) => response.json())
@@ -24,30 +22,9 @@ const MovieDetails = () => {
 
   return (
     <div>
-      {/* {movie && (
-        <>
-          <h1>{movie.title}</h1>
-          <p>{movie.overview}</p>
-          <Link to="cast">Cast</Link>
-          <Link to="reviews">Reviews</Link>
-          <Outlet />
-        </>
-      )
-      } */}
-      {console.log(params)}
-      {console.log(movie)}
-      {/* <ul>
-       <li>
-         <Link to="cast">Cast</Link>
-       </li>
-       <li>
-         <Link to="reviews">Reviews</Link>
-       </li>
-      
-     </ul>
-     <Outlet /> */}
+  <h2>cast</h2>
     </div>
   );
 };
 
-export default MovieDetails;
+export default Cast;
