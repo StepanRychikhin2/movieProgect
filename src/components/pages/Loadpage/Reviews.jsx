@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { useParams, Outlet, Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react'
+import { useParams, Outlet, Link } from 'react-router-dom'
 
 const options = {
 	method: 'GET',
@@ -11,20 +11,20 @@ const options = {
 }
 
 const Reviews = () => {
-  // const { movieId } = useParams();
-  const [movie, setMovie] = useState(null);
-  const { id } = useParams();
-  // useEffect(() => {
-  //   fetch(`https://api.themoviedb.org/3/movie/${movieId}?language=en-US`, options)
-  //   .then((response) => response.json())
-  //   .then((data) => setMovie(data));
-  // }, [movieId]);
+	// const { movieId } = useParams();
+	const [movie, setMovie] = useState(null)
+	const { id } = useParams()
+	// useEffect(() => {
+	//   fetch(`https://api.themoviedb.org/3/movie/${movieId}?language=en-US`, options)
+	//   .then((response) => response.json())
+	//   .then((data) => setMovie(data));
+	// }, [movieId]);
+	console.log(`rewie2ws ${id}`)
+	return (
+		<div>
+			<h2>`rewie2ws ${id}`</h2>
+		</div>
+	)
+}
 
-  return (
-    <div>
-  <h2>revs</h2>
-    </div>
-  );
-};
-
-export default Reviews;
+export default Reviews

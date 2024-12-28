@@ -14,3 +14,9 @@ font-size: 25px;
 body{
     background-color: rgb(136, 136, 136);
 }
+
+
+.imgPoster{
+    width: 300px;
+    height: 450px;
+}

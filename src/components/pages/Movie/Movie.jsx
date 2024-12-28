@@ -1,5 +1,5 @@
-import { Outlet, Link } from "react-router-dom";
-import { useState } from "react";
+import { Outlet, Link } from 'react-router-dom'
+import { useState } from 'react'
 const options = {
 	method: 'GET',
 	headers: {
@@ -9,34 +9,46 @@ const options = {
 	},
 }
 const MovieSerh = () => {
+	const [serhFilms, setSerhFilms] = useState([])
+	function seachFilm(nameSerh) {
+		fetch(
+			`https://api.themoviedb.org/3/search/movie?language=en-US&page=1&query=${nameSerh}`,
+			options
+		)
+			.then((data) => data.json())
+			.then((data) => setSerhFilms(data))
+	}
 
-  const [serhFilms, setSerhFilms] = useState([])
-function seachFilm(nameSerh) {
-  fetch(`https://api.themoviedb.org/3/search/movie?language=en-US&page=1&query=${nameSerh}`,
-				options)
-        .then((data) => data.json())
-				.then((data) => setSerhFilms(data))
+	return (
+		<>
+			<input id="inputSerh" placeholder="searh"></input>
+			<button
+				onClick={(e) => seachFilm(document.getElementById('inputSerh').value)}
+				type="button"
+			>
+				searh
+			</button>
+
+			<ul>
+				{serhFilms && serhFilms.results ? (
+					serhFilms.results.map((data) => {
+						return (
+							<li key={data.id}>
+								<Link to={`/Loadpage/${data.id}`}>
+									<p>{data.original_title}</p>
+								</Link>
+								{/* {params.data.id} */}
+							</li>
+						)
+					})
+				) : (
+					<p>please enter the name movie...</p>
+				)}
+				{console.log(serhFilms)}
+			</ul>
+			<Outlet />
+		</>
+	)
 }
 
-  return (
-    <>
-   <input id="inputSerh" placeholder="searh">
-      
-      </input>
-      <button onClick={(e) => seachFilm(document.getElementById("inputSerh").value)} type="button">searh</button>
-
-<ul>
-  { serhFilms && serhFilms.results ? (serhFilms.results.map((data) => {
-    return (<li key={data.id}>
-      <Link to="/Loadpage"><p>{data.original_title}</p></Link>
-      {/* {params.data.id} */}
-    </li>)
-  })) : (<p>please enter the name movie...</p>)}
-  {console.log(serhFilms)}
-</ul>
-      <Outlet />
-    </>
-  )
-};
-
-export default MovieSerh;
+export default MovieSerh
