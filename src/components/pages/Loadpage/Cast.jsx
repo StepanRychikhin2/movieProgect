@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams, Outlet, Link } from 'react-router-dom'
-
+import sty from '../../allStyle.module.css'
 const options = {
 	method: 'GET',
 	headers: {
@@ -11,18 +11,39 @@ const options = {
 }
 
 const Cast = () => {
-	// const { movieId } = useParams();
-	const [movie, setMovie] = useState(null)
 	const { id } = useParams()
-	// useEffect(() => {
-	//   fetch(`https://api.themoviedb.org/3/movie/${movieId}?language=en-US`, options)
-	//   .then((response) => response.json())
-	//   .then((data) => setMovie(data));
-	// }, [movieId]);
+	const [movie, setMovie] = useState(null)
+
+	useEffect(() => {
+		fetch(
+			`https://api.themoviedb.org/3/movie/${id}/credits?language=en-US`,
+			options
+		)
+			.then((response) => response.json())
+			.then((data) => setMovie(data))
+	}, [id])
 	console.log(`cast ${id}`)
+	console.log(movie)
 	return (
 		<div>
-			<h2>`cast ${id}`</h2>
+			<h2>CAAST</h2>
+			<ul>
+				{movie && movie.cast ? (
+					movie.cast.map((data) => {
+						return (
+							<li>
+								<img
+									className={sty.photoCasts}
+									src={`https://image.tmdb.org/t/p/w500/${data.profile_path}`}
+								></img>
+								<p>{data.original_name}</p>
+							</li>
+						)
+					})
+				) : (
+					<p>load</p>
+				)}
+			</ul>
 		</div>
 	)
 }

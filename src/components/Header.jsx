@@ -6,10 +6,10 @@ const Header = () => {
 			<nav>
 				<ul className={sty.listHeader}>
 					<li>
-						<Link to="/">Home</Link>
+						<Link className={sty.linkHeader} to="/">Home</Link>
 					</li>
 					<li>
-						<Link to="/Movie">Movie</Link>
+						<Link className={sty.linkHeader} to="/Movie">Movie</Link>
 					</li>
 
 				</ul>
