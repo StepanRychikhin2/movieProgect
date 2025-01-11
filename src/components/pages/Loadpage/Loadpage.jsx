@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { useParams, Outlet, Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import sty from '../../allStyle.module.css'
 const options = {
 	method: 'GET',
@@ -12,7 +13,8 @@ const options = {
 
 const MovieDetails = () => {
 	let params = useParams()
-	console.log(params.id)
+	const navigate = useNavigate()
+	// console.log(params.id)
 	const [movie, setMovie] = useState([])
 	useEffect(() => {
 		fetch(
@@ -25,7 +27,24 @@ const MovieDetails = () => {
 
 		console.log(params.id)
 	}, [])
-	console.log(movie.id)
+	// useEffect(() => {
+	// 	console.log(movie)
+	// 		prevd()
+	// }, [])
+	// console.log(movie)
+	// const prevd = useCallback((e)=> {
+	// 	if (movie.id) {
+
+	// 		console.log("suss")
+	// 	} else {
+	// 		navigate("/")
+	// 		alert("movie not found")
+
+	// 	}
+	// })
+
+	console.log(movie)
+
 	return movie.id ? (
 		<div>
 			{movie && (
@@ -47,22 +66,32 @@ const MovieDetails = () => {
 						</div>
 					</div>
 					<div className={sty.loadLinks}>
-					<Link className={sty.tocast} to={`cast/${params.id}`}>Cast</Link>
-					<Link to={`reviews/${params.id}`}>Reviews</Link>
-					<Outlet />
+						<Link className={sty.tocast} to={`cast/${params.id}`}>
+							Cast
+						</Link>
+						<Link to={`reviews/${params.id}`}>Reviews</Link>
+						<Outlet />
 					</div>
-					
 				</>
 			)}
 		</div>
 	) : (
-		<div className={sty.notFoundLoadPage}>
-			<h2 className={sty.notFoundLoad}>movie not found :)</h2>
-			<img
-				className={sty.notFoundLoadimg}
-				src="https://img.freepik.com/free-vector/oops-404-error-with-broken-robot-concept-illustration_114360-5529.jpg"
-			></img>
-		</div>
+		<>
+			{/* {movie.id
+				? null
+				: setTimeout(() => {
+						navigate('/')
+				  }, 5000)} */}
+			{/* {alert("movie not found")} */}
+
+			<div className={sty.notFoundLoadPage}>
+				<h2 className={sty.notFoundLoad}>movie not found :)</h2>
+				<img
+					className={sty.notFoundLoadimg}
+					src="https://img.freepik.com/free-vector/oops-404-error-with-broken-robot-concept-illustration_114360-5529.jpg"
+				></img>
+			</div>
+		</>
 	)
 }
 
