@@ -26,7 +26,7 @@ const Cast = () => {
 	console.log(movie)
 	return (
 		<div>
-			<h2>CAAST</h2>
+			<h2>CAST</h2>
 			<ul className={sty.listCastAcrtor}>
 				{movie && movie.cast ? (
 					movie.cast.map((data) => {
@@ -37,7 +37,7 @@ const Cast = () => {
 									src={`https://image.tmdb.org/t/p/w500/${data.profile_path}`}
 								></img>
 								<p className={sty.castName}>{data.original_name}</p>
-								<p className={sty.castTXT}>playning</p>
+								<p className={sty.castTXT}>as</p>
 								<p className={sty.castTXT}>🔽🔽🔽🔽</p>
 								<p className={sty.castCharacters}>{data.character}</p>
 							</li>

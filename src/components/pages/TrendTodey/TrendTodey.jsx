@@ -30,8 +30,14 @@ const TrendToday = () => {
 				.then((data) => data.json())
 				.then((data) => setMovieTrendToday(data.results || []))
 		}
-	}, [firstLoad])
 
+		
+
+
+	}, [firstLoad])
+	document.addEventListener('keydown', function (e) {
+		if(e.key === "Escape") setVis(false)
+	}); 
 	const openModal = (id) => {
 		setVis(true)
 		setSelectedId(id)
@@ -74,7 +80,7 @@ const TrendToday = () => {
 			{vis && (
 				<div className={sty.overlay}>
 					<div className={sty.modalBox}>
-						<h2 className={sty.loadTitle}>ви хочете перейти?</h2>
+						<h2 className={sty.loadTitle}>Do you want to see the info?</h2>
 						<img className={sty.loadImg} src={logo} alt="loading..." />
 						<button onClick={() => prevd(selectedId)} className={sty.loadBtn}>
 							Yes

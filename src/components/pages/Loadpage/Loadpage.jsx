@@ -83,6 +83,9 @@ const MovieDetails = () => {
 						navigate('/')
 				  }, 5000)} */}
 			{/* {alert("movie not found")} */}
+{/* <p>load</p> */}
+
+
 
 			<div className={sty.notFoundLoadPage}>
 				<h2 className={sty.notFoundLoad}>movie not found :)</h2>

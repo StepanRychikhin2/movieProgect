@@ -267,6 +267,7 @@ z-index: 1;
 
 .loadTitle{
     color: white;
+    font-size: 20px;
 }
 .modalBox{
     display: flex;
