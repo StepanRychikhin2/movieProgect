@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/movrog/static/css/main.d900a48c.css",
-    "main.js": "/movrog/static/js/main.9e226fdb.js",
+    "main.js": "/movrog/static/js/main.e1f02ba3.js",
     "static/js/879.9aaf285d.chunk.js": "/movrog/static/js/879.9aaf285d.chunk.js",
     "static/js/159.0b8067c1.chunk.js": "/movrog/static/js/159.0b8067c1.chunk.js",
     "static/js/923.3879375a.chunk.js": "/movrog/static/js/923.3879375a.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/561.c81206d8.chunk.js": "/movrog/static/js/561.c81206d8.chunk.js",
     "index.html": "/movrog/index.html",
     "main.d900a48c.css.map": "/movrog/static/css/main.d900a48c.css.map",
-    "main.9e226fdb.js.map": "/movrog/static/js/main.9e226fdb.js.map",
+    "main.e1f02ba3.js.map": "/movrog/static/js/main.e1f02ba3.js.map",
     "879.9aaf285d.chunk.js.map": "/movrog/static/js/879.9aaf285d.chunk.js.map",
     "159.0b8067c1.chunk.js.map": "/movrog/static/js/159.0b8067c1.chunk.js.map",
     "923.3879375a.chunk.js.map": "/movrog/static/js/923.3879375a.chunk.js.map",
@@ -20,6 +20,6 @@
   },
   "entrypoints": [
     "static/css/main.d900a48c.css",
-    "static/js/main.9e226fdb.js"
+    "static/js/main.e1f02ba3.js"
   ]
 }
