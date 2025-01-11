@@ -27,16 +27,19 @@ const Cast = () => {
 	return (
 		<div>
 			<h2>CAAST</h2>
-			<ul>
+			<ul className={sty.listCastAcrtor}>
 				{movie && movie.cast ? (
 					movie.cast.map((data) => {
 						return (
-							<li>
+							<li className={sty.castActor}>
 								<img
 									className={sty.photoCasts}
 									src={`https://image.tmdb.org/t/p/w500/${data.profile_path}`}
 								></img>
-								<p>{data.original_name}</p>
+								<p className={sty.castName}>{data.original_name}</p>
+								<p className={sty.castTXT}>playning</p>
+								<p className={sty.castTXT}>🔽🔽🔽🔽</p>
+								<p className={sty.castCharacters}>{data.character}</p>
 							</li>
 						)
 					})

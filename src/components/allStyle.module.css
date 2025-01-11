@@ -2,6 +2,10 @@ ul{
     margin: 0;
     padding: 0;
 }
+p{
+    padding: 0;
+    margin: 0;
+}
 
 
 .listHeader {
@@ -133,6 +137,7 @@ body{
 
 .photoCasts{
     width: 200px;
+    border-radius: 20px;
 }
 
 .photoPoster{
@@ -140,13 +145,7 @@ body{
     width: 350px;
 }
 
-.listTrendTodey{
-    gap: 10px;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
+
 .textPosterTrend{
     width: 360px;
 }
@@ -166,3 +165,186 @@ body{
     margin: 0;
     background-color: rgb(82, 82, 82);
 }
+.listTrendTodey{
+    gap: 10px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.castActor{
+    border-radius: 20px;
+    padding: 10px 0px 10px 0px;
+    margin: 0;
+    background-color: rgb(82, 82, 82);
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.listCastAcrtor{
+    gap: 10px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.castName{
+    font-family: "Roboto Mono", serif;
+font-optical-sizing: auto;
+font-weight: 600;
+font-style: normal;
+font-size: 15px;
+}
+
+
+.castTXT{
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+}
+.castCharacters{
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.listRewiewItem{
+    border-radius: 20px;
+    padding: 10px 0px 10px 0px;
+    margin: 0;
+    background-color: rgb(82, 82, 82);
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.listRewiew{
+    gap: 10px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+
+  
+}
+
+
+.listRewiewRaiting{
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.listRewiewContent{
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+}
+
+
+.loadLinks{
+margin: 20px;
+font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.tocast{
+    margin-right: 10px;
+}
+
+
+
+
+.inputContainerBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+.inputContainer {
+    width: 220px;
+    position: relative;
+  }
+  
+  .icon {
+    background-color: white;
+    border: 0;
+    position: absolute;
+    right: 10px;
+    top: calc(50% + 5px);
+    transform: translateY(calc(-50% - 5px));
+  }
+  
+  .input {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    transition: .2s linear;
+    border: 2.5px solid black;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .input:focus {
+    outline: none;
+    border: 0.5px solid black;
+    box-shadow: -5px -5px 0px black;
+  }
+  
+
+  
+ 
+  .serhList{
+    gap: 10px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+flex-direction: column;
+  }
+  
+
+  .serhItyem{
+    padding-left: 40px;
+    border-radius: 20px;
+    padding: 10px 0px 10px 0px;
+    margin: 0;
+    background-color: rgb(82, 82, 82);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+
+  .serhPoster{
+    width: 200px;
+    border-radius: 20px;
+  }
+
+  .serhtextName{
+    margin: 10px;
+font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    color: rgb(0, 146, 146);
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }

@@ -26,14 +26,14 @@ const Reviews = () => {
 	return (
 		<div>
 			<h2>REVIEWS</h2>
-			<ul>
+			<ul className={sty.listRewiew}>
 				{movie && movie.results ? (
 					movie.results.map((data) => {
 						return (
-							<li>
-								<h2>{data.author}</h2>
-								<p>raiting: {data.author_details.rating}</p>
-								<p>{data.content}</p>
+							<li className={sty.listRewiewItem}>
+								<h2 className={sty.listRewiewAutor}>{data.author}</h2>
+								<p className={sty.listRewiewRaiting}>raiting: {data.author_details.rating}</p>
+								<p className={sty.listRewiewContent}>{data.content}</p>
 							</li>
 						)
 					})
