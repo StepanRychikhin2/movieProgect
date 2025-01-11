@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/movrog/static/css/main.5e1b8850.css",
-    "main.js": "/movrog/static/js/main.fb666a8d.js",
+    "main.css": "/movrog/static/css/main.ea98d495.css",
+    "main.js": "/movrog/static/js/main.32875a64.js",
     "static/js/879.9aaf285d.chunk.js": "/movrog/static/js/879.9aaf285d.chunk.js",
-    "static/js/159.0b8067c1.chunk.js": "/movrog/static/js/159.0b8067c1.chunk.js",
+    "static/js/159.fa2b3a0e.chunk.js": "/movrog/static/js/159.fa2b3a0e.chunk.js",
     "static/js/923.22342f0b.chunk.js": "/movrog/static/js/923.22342f0b.chunk.js",
-    "static/js/930.5fb2f5f1.chunk.js": "/movrog/static/js/930.5fb2f5f1.chunk.js",
+    "static/js/930.69b38f73.chunk.js": "/movrog/static/js/930.69b38f73.chunk.js",
     "static/js/875.3732f5aa.chunk.js": "/movrog/static/js/875.3732f5aa.chunk.js",
     "static/media/g0R5.gif": "/movrog/static/media/g0R5.0bbdeb441caf0d022869.gif",
     "index.html": "/movrog/index.html",
-    "main.5e1b8850.css.map": "/movrog/static/css/main.5e1b8850.css.map",
-    "main.fb666a8d.js.map": "/movrog/static/js/main.fb666a8d.js.map",
+    "main.ea98d495.css.map": "/movrog/static/css/main.ea98d495.css.map",
+    "main.32875a64.js.map": "/movrog/static/js/main.32875a64.js.map",
     "879.9aaf285d.chunk.js.map": "/movrog/static/js/879.9aaf285d.chunk.js.map",
-    "159.0b8067c1.chunk.js.map": "/movrog/static/js/159.0b8067c1.chunk.js.map",
+    "159.fa2b3a0e.chunk.js.map": "/movrog/static/js/159.fa2b3a0e.chunk.js.map",
     "923.22342f0b.chunk.js.map": "/movrog/static/js/923.22342f0b.chunk.js.map",
-    "930.5fb2f5f1.chunk.js.map": "/movrog/static/js/930.5fb2f5f1.chunk.js.map",
+    "930.69b38f73.chunk.js.map": "/movrog/static/js/930.69b38f73.chunk.js.map",
     "875.3732f5aa.chunk.js.map": "/movrog/static/js/875.3732f5aa.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5e1b8850.css",
-    "static/js/main.fb666a8d.js"
+    "static/css/main.ea98d495.css",
+    "static/js/main.32875a64.js"
   ]
 }
